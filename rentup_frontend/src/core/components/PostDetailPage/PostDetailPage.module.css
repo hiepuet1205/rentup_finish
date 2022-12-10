@@ -1,0 +1,225 @@
+.grid {
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+
+.grid.wide {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -4px;
+    margin-right: -4px;
+}
+
+.row.nogutters {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.row.nogutters .col {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.c6 {
+    flex: 0 0 calc(100% / 2);
+    max-width: calc(100% / 2);
+}
+
+.post {
+    margin: 50px 0;
+}
+
+.post button {
+    border-radius: 5px;
+    padding: 17px 30px;
+    background: #27ae60;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.post button i {
+    margin-right: 5px;
+}
+
+.postdetail {
+    border-radius: 5px;
+    box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%);
+    padding: 32px;
+    margin-right: 10px;
+    margin-left: -10px;
+}
+
+.postdetail .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.postdetail .headerdetail h1{
+    color: #2d3954;
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.postdetail .headerdetail p{
+    color: #72809d;
+}
+
+.postdetail .headercategory .btn3 {
+    background: #ff6922;
+    border-radius: 50px;
+}
+
+.postdetail .main{
+    padding: 0 20px;
+}
+
+.postdetail .main .mainButton{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.postdetail .mainButton a{
+    border-radius: 5px;
+    padding: 17px 30px;
+    background: #27ae60;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.postdetail .main img{
+    width: 100%;
+    height: 170px !important;
+}
+
+.postdetail .main p {
+    color: #2d3954;
+}
+
+.landlordDetails {
+    background: #ffffff;
+    border-radius: 6px;
+    border: 1px solid rgb(62 28 131 / 10%);
+    padding: 2rem;
+    transition: 0.5s;
+    height: 100%;
+}
+
+.landlordDetails:hover {
+    box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%);
+    cursor: pointer;
+}
+
+.landlordDetails .details {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.landlordDetails .img {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    position: relative;
+}
+
+.landlordDetails img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.landlordDetails .img i {
+    color: #108be7;
+    font-size: 17px;
+    position: absolute;
+    top: 35px;
+    right: -10px;
+}
+
+.landlordDetails .img::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 110px;
+    height: 110px;
+    border: 5px solid #edf0f5;
+    border-radius: 50%;
+}
+
+.landlordDetails label {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.landlordDetails i {
+    color: grey;
+    margin-right: 5px;
+}
+
+.landlordDetails .button {
+    margin-top: 20px;
+}
+
+.landlordDetails .button i {
+    color: white;
+    font-size: 20px;
+}
+
+.landlordDetails .btn3 {
+    background: #ff6922;
+    border-radius: 50px;
+}
+
+.landlordDetails .btn4 {
+    background-color: #000;
+    color: #fff;
+}
+
+.landlordDetails ul {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.landlordDetails ul li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    align-items: center;
+    background-color: #f4f5f7;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .l12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

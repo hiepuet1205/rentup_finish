@@ -1,0 +1,104 @@
+.filter {
+    background-image: url("../../../../assets/img/banner.1a3c8a0a448e8e24f6a0.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+}
+
+.filter .container {
+    padding-top: 15%;
+    max-width: 80%;
+    margin: auto;
+}
+
+.filter .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter h1 {
+    color: #fff !important;
+    font-size: 60px !important;
+}
+
+.filter p {
+    color: #fff !important;
+    opacity: 0.8 !important;
+}
+
+.filter form {
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.filter form input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.filter form select {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 17px;
+    color: black;
+}
+
+.filter form span {
+    font-size: 14px;
+    color: grey;
+}
+
+.filter input::placeholder {
+    font-size: 17px;
+    color: black;
+}
+
+.filter form .box {
+    width: 100%;
+    padding: 15px;
+    border-left: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.filter form .box:nth-child(1) {
+    border-left: none;
+}
+
+.filter form h4 {
+    font-weight: 500;
+}
+
+@media (max-width: 800px) {
+    .filter{
+        height: 100%;
+    }
+    
+    .filter .container {
+        padding-top: 30%;
+        max-width: 100%;
+    }
+    
+    .filter form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .filter form .box {
+        border-left: none;
+    }
+    
+    .filter form input {
+        width: 100%;
+    }
+    
+}

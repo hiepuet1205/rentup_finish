@@ -1,0 +1,162 @@
+.wrapper {
+    display: flex;
+  }
+  
+  .sidebar {
+    min-height: 100%;
+    min-width: 220px;
+    background-color: #1d2636;
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .body {
+    background-color: #e8f5ff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .profile {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+  }
+  
+  .profile h2 {
+    align-self: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .content_box {
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 50px;
+    box-shadow: 1px 1px 8px 0 grey;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .profile_btn{
+    background-color: #ff6922;
+    margin: 10px 0;
+    max-width: 200px;
+  }
+  
+  .profile_link{
+    padding: 17px 30px;
+    color: #fff;
+    background-color: #ff6922;
+    border-radius: 5px;
+    font-size: 13px;
+    margin: 10px 0 !important;
+  }
+  
+  .profile_img{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile_img img {
+    margin-bottom: 20px;
+    width: 220px;
+    height: 200px;
+    box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%);
+    border-radius: 5px;
+  }
+  
+  .content_box table{
+    margin-right: 50px;
+  }
+  
+  .content_box tr {
+    height: 40px;
+  }
+  
+  .content_box tr input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid #2691d9;
+    border-radius: 5px;
+  }
+  
+  .content_box tr select{
+    padding: 8px;
+    width: 100%;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 17px;
+    color: black;
+}
+  
+  .content_box td:first-of-type {
+    width: 140px;
+  }
+  
+  .content_box td:nth-child(2) {
+    width: 15px;
+  }
+  
+  .content_box tr button {
+    margin-left: 15px;
+    right: 0;
+  }
+  
+  .content_box a {
+    margin: 0 10px;
+  }
+  
+  .social_box div {
+    background-color: black;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+  }
+  
+  .social_box {
+    flex: 1;
+  }
+  
+  .social_box td{
+    height: 60px;
+    white-space: wrap;
+  }
+  
+  .facebook:hover {
+    background-color: #3F62A9;
+  }
+  
+  .instagram:hover {
+    background-color: #CE2B94;
+  }
+  
+  .twitter:hover {
+    background-color: #1C99E7;
+  }
+  
+  .linkedin:hover {
+    background-color: #0077B5;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 27px;
+  }
+  
+@media (max-width: 1113px) {
+    .content_box{
+    flex-direction: column;
+    }
+    
+}

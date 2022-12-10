@@ -1,0 +1,101 @@
+.landlordCard {
+    background: #ffffff;
+    border-radius: 6px;
+    border: 1px solid rgb(62 28 131 / 10%);
+    padding: 2rem;
+    transition: 0.5s;
+    min-width: 220px;
+}
+
+.landlordCard:hover {
+    box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%);
+    cursor: pointer;
+}
+
+.landlordCard .details {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.landlordCard .img {
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    position: relative;
+}
+
+.landlordCard img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.landlordCard .img i {
+    color: #108be7;
+    font-size: 17px;
+    position: absolute;
+    top: 35px;
+    right: -10px;
+}
+
+.landlordCard .img::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 110px;
+    height: 110px;
+    border: 5px solid #edf0f5;
+    border-radius: 50%;
+}
+
+.landlordCard label {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.landlordCard i {
+    color: grey;
+    margin-right: 5px;
+}
+
+.landlordCard ul {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.landlordCard ul li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    align-items: center;
+    background-color: #f4f5f7;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.landlordCard .button {
+    margin-top: 20px;
+}
+
+.landlordCard .button i {
+    color: white;
+    font-size: 20px;
+}
+
+.landlordCard .btn3 {
+    background: #ff6922;
+    border-radius: 50px;
+}
+
+.landlordCard .btn4 {
+    background-color: #000;
+    color: #fff;
+}
+
+.landlordCard .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

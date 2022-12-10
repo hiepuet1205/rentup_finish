@@ -1,0 +1,59 @@
+.rentRequestCard{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 70px;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 20px 0 rgb(112 121 138 / 18%);
+}
+
+.rentRequestCard_info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rentRequestCard_message{
+    margin: 30px 0;
+}
+
+.rentRequestCard_message h2{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.rentRequestCard_action{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rentRequestCard_action button{
+    width:20%;
+    border-radius: 20px;
+    background-color: #ff6922;
+    font-size: 20px;
+}
+
+.rentRequestCard_confirm{
+    background-color: #27ae60 !important;
+}
+
+@media (max-width: 1113px) {
+    .rentRequestCard_info{
+        display: flex;
+        flex-direction: column;
+    } 
+    
+    .rentRequestCard_action{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .rentRequestCard_action button{
+        width: 100%;
+        margin: 10px 0;
+    }
+}
