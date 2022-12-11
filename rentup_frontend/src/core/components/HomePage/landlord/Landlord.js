@@ -25,6 +25,7 @@ const Landlord = () => {
                     linkin: data.linkin,
                     linktw: data.linktw,
                     linkli: data.linkli,
+                    phone: data.phone
                 })
             })
             setData(temp)
@@ -50,6 +51,7 @@ const Landlord = () => {
                         linkin: data.linkin,
                         linktw: data.linktw,
                         linkli: data.linkli,
+                        phone: data.phone
                     })
                 })
                 setData(temp)
@@ -65,7 +67,7 @@ const Landlord = () => {
     return (
         <section className={classes.landlord}>
             <div className={classes.container}>
-                <Heading title='Our Featured Agents' subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.' />
+                <Heading title='Our Featured Agents' subtitle='All real estate owners.' />
 
                 <div className={`${classes.mtop} ${classes.grid3}`}>
                     {data.map((item, index) => <LandlordCard item={item} index={index}/>)}

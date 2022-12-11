@@ -7,30 +7,7 @@ import {getProvince, getDistrict, getWard} from "../../../api/ProvinceApi"
 import { getHouseDetail, editHouse } from "../../../api/HouseApi";
 import { useParams } from 'react-router-dom';
 import Popup from "../common/Popup/Popup"
-
-const typeData = [
-    {
-        text: "Family House",
-        value: "1"
-    },
-    {
-        text: "House & Villa",
-        value: "2"
-    },
-    {
-        text: "Apartment",
-        value: "3"
-    },
-    {
-        text: "Office & Studio",
-        value: "4"
-    },
-    {
-        text: "Villa & Condo",
-        value: "5"
-    },
-    
-]
+import {getAllCategory} from "../../../api/CategoryApi"
 
 const EditHousePage = () => {
     const history = useHistory()
@@ -42,6 +19,7 @@ const EditHousePage = () => {
     const [cityData, setCityData] = useState([])
     const [districtData, setDistrictData] = useState([])
     const [wardData, setWardData] = useState([])
+    const [typeData, setTypeData] = useState([])
     
     const imageRef = useRef()
     
@@ -103,6 +81,24 @@ const EditHousePage = () => {
         })
         .catch(error => console.log('Error', error))
     }, [district])
+    
+    useEffect(() => {
+        getAllCategory()
+        .then((data) => {
+            const temp = []
+            data.forEach(data => {
+                temp.push({
+                    text: data.name,
+                    img: data.image,
+                    value: data.id,
+                })
+            })
+            setTypeData(temp)
+        })
+        .catch((err) => {
+            alert(err.message);
+        });
+    }, [])
     
     useEffect(() => {
         getHouseDetail(id, authCtx.token)

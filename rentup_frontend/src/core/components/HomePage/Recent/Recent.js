@@ -65,7 +65,7 @@ const Recent = (props) => {
     return (
         <section className={`${classes.recent} ${classes.padding}`}>
             <div className={classes.container}>
-                <Heading title='Recent Property Listed' subtitle='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.' />
+                <Heading title='Recent Property Listed' subtitle='Find new & featured property located in your local city.' />
                 <div className={`${classes.grid3} ${classes.mtop}`}>
                     {data.map((item, index) => <RecentCard item={item} index={index}/>)}
                 </div>

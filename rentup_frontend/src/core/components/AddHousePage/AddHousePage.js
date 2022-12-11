@@ -6,30 +6,7 @@ import AuthContext from '../../../store/auth-context';
 import {getProvince, getDistrict, getWard} from "../../../api/ProvinceApi"
 import { createHouseApi } from "../../../api/HouseApi";
 import Popup from "../common/Popup/Popup"
-
-const typeData = [
-    {
-        text: "Family House",
-        value: "0"
-    },
-    {
-        text: "House & Villa",
-        value: "1"
-    },
-    {
-        text: "Apartment",
-        value: "2"
-    },
-    {
-        text: "Office & Studio",
-        value: "3"
-    },
-    {
-        text: "Villa & Condo",
-        value: "4"
-    },
-    
-]
+import {getAllCategory} from "../../../api/CategoryApi"
 
 const AddHousePage = () => {
     const history = useHistory()
@@ -37,6 +14,7 @@ const AddHousePage = () => {
     const [cityData, setCityData] = useState([])
     const [districtData, setDistrictData] = useState([])
     const [wardData, setWardData] = useState([])
+    const [typeData, setTypeData] = useState([])
     const [popup, setPopup] = useState(false)
     const [popupTitle, setPopupTitle] = useState('Add House successfully')
     const [popupDetail, setPopupDetail] = useState('Your house has been added')
@@ -98,6 +76,24 @@ const AddHousePage = () => {
         })
         .catch(error => console.log('Error', error))
     }, [district])
+    
+    useEffect(() => {
+        getAllCategory()
+        .then((data) => {
+            const temp = []
+            data.forEach(data => {
+                temp.push({
+                    text: data.name,
+                    img: data.image,
+                    value: data.id,
+                })
+            })
+            setTypeData(temp)
+        })
+        .catch((err) => {
+            alert(err.message);
+        });
+    }, [])
     
     const handleChange = (key) => {
         return (event) => {

@@ -87,6 +87,7 @@ const ManagerHouse = () => {
                             linkin: item.landlord.linkin,
                             linktw: item.landlord.linktw,
                             linkli: item.landlord.linkli,
+                            phone: item.landlord.phone,
                         },
                         message: item.message,
                         id: item.id,

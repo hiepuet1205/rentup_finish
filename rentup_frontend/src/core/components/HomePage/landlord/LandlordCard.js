@@ -25,7 +25,7 @@ const LandlordCard = props => {
                         Message
                     </button>
                     <button className={classes.btn4}>
-                        <i className='fa fa-phone-alt'></i>
+                        <a href={`tel:${props.item.phone}`}><i className='fa fa-phone-alt'></i></a>
                     </button>
                 </div>
             </div>

@@ -12,10 +12,6 @@ const Data = [
         path: "/",
     },
     {
-        text: "about",
-        path: "/about",
-    },
-    {
         text: "type",
         path: "/type",
     },

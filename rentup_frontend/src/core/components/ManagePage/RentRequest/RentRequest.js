@@ -87,6 +87,7 @@ const RentRequest = () => {
                             linkin: item.tenant.linkin,
                             linktw: item.tenant.linktw,
                             linkli: item.tenant.linkli,
+                            phone: item.tenant.phone,
                         },
                         message: item.message,
                         id: item.id

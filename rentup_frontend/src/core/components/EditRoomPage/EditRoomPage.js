@@ -5,30 +5,7 @@ import { useContext, useState, useRef, useEffect } from "react"
 import AuthContext from '../../../store/auth-context';
 import {editRoom, getRoomByRoomId} from '../../../api/RoomApi'
 import Popup from "../common/Popup/Popup"
-
-const typeData = [
-    {
-        text: "Family House",
-        value: "1"
-    },
-    {
-        text: "House & Villa",
-        value: "2"
-    },
-    {
-        text: "Apartment",
-        value: "3"
-    },
-    {
-        text: "Office & Studio",
-        value: "4"
-    },
-    {
-        text: "Villa & Condo",
-        value: "5"
-    },
-    
-]
+import {getAllCategory} from "../../../api/CategoryApi"
 
 const AddRoomPage = () => {
     const params = useParams()
@@ -40,6 +17,8 @@ const AddRoomPage = () => {
     const authCtx = useContext(AuthContext)
     
     const imageRef = useRef()
+    
+    const [typeData, setTypeData] = useState([])
     
     const [values, setValues] = useState({
         name: '',
@@ -86,6 +65,24 @@ const AddRoomPage = () => {
             setValues({...values, [key]: event.target.value})
         }
     }
+    
+    useEffect(() => {
+        getAllCategory()
+        .then((data) => {
+            const temp = []
+            data.forEach(data => {
+                temp.push({
+                    text: data.name,
+                    img: data.image,
+                    value: data.id,
+                })
+            })
+            setTypeData(temp)
+        })
+        .catch((err) => {
+            alert(err.message);
+        });
+    }, [])
     
     const submitHandler = (event) => {
         event.preventDefault();

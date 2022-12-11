@@ -37,6 +37,7 @@ const PostDetailPage = () => {
                 linkin: data.house.landlord.linkin,
                 linktw: data.house.landlord.linktw,
                 linkli: data.house.landlord.linkli,
+                phone: data.house.landlord.phone,
             })
         })
         .catch((err) => {
@@ -76,7 +77,7 @@ const PostDetailPage = () => {
                                             Message
                                         </button>
                                         <button class={classes.btn4}>
-                                            <i class='fa fa-phone-alt'></i>
+                                            <a href={`tel:${landlord.phone}`}><i className='fa fa-phone-alt'></i></a>
                                         </button>
                                     </div>
                                 </div>
