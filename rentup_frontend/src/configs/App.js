@@ -31,13 +31,13 @@ export let endpoints = {
     "notification": "/api/notification/",
 }
 
-// export const Api = "http://w42g6.int3306.freeddns.org/"
-export const Api = "http://127.0.0.1:8000/"
-
-// export default axios.create({
-//     baseURL: "http://w42g6.int3306.freeddns.org/"
-// })
+export const Api = "http://w42g6.int3306.freeddns.org/"
+// export const Api = "http://127.0.0.1:8000/"
 
 export default axios.create({
-    baseURL: "http://127.0.0.1:8000/"
+    baseURL: "http://w42g6.int3306.freeddns.org/"
 })
+
+// export default axios.create({
+//     baseURL: "http://127.0.0.1:8000/"
+// })
