@@ -58,6 +58,9 @@ class RentRequestViewSet(viewsets.ModelViewSet):
             #     {'status': "Fail", 'data': "Cant find room with this id!"})
             return Response(status=status.HTTP_400_BAD_REQUEST, data="Cant find room with this id!")
 
+        if tenant == landlord:
+            return Response(status=status.HTTP_400_BAD_REQUEST, data="Cant create request with this room!")
+
         if tenant.balance >= room.totalPrice:
             new_rent_request = RentRequest.objects.create(
                 room=room,

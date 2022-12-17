@@ -26,7 +26,7 @@ const AddHousePage = () => {
         city: '1',
         district: '1',
         ward: '1',
-        type: '0',
+        type: '1',
         detail: '',
         description: ''
     })
