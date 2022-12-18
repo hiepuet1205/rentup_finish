@@ -17,7 +17,7 @@ const PostDetailPage = () => {
         getRoomByRoomId(id)
         .then((data) => {
             setPost({
-                room_name: data.name,
+                room_name: `${data.house.detail} ${data.name}`,
                 location: data.house.city + ' ' + data.house.district + ' ' + data.house.ward,
                 room_type: data.category.name,
                 detail: data.detail,
