@@ -1,30 +1,6 @@
 import classes from "./RecentCard.module.css"
 import { Link } from 'react-router-dom'
 
-const typeData = [
-    {
-        text: "Family House",
-        value: "Family House"
-    },
-    {
-        text: "House & Villa",
-        value: "House & Villa"
-    },
-    {
-        text: "Apartment",
-        value: "Apartment"
-    },
-    {
-        text: "Office & Studio",
-        value: "Office & Studio"
-    },
-    {
-        text: "Villa & Condo",
-        value: "Villa & Condo"
-    },
-    
-]
-
 const RecentCard = props => {
     return (
         <Link className={`${classes.shadow} ${classes.recentCard}`} key={props.item.index} to={`/post/${props.item.room_id}`}>

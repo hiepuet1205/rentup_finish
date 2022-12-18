@@ -43,7 +43,7 @@ const Recent = (props) => {
                 response.data.results.forEach(data => {
                     temp.push({
                         room_id: data.id,
-                        room_name: data.name,
+                        room_name: data.house.detail,
                         cover: data.image,
                         category: data.category.name,
                         city: data.house.city,
