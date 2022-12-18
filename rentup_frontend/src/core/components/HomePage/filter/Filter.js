@@ -158,21 +158,21 @@ const Filter = (props) => {
                     </select>
                 </div>
                 <div className={classes.box}>
-                    <span>Price Max</span>
-                    <input 
-                        type='number' 
-                        placeholder='Price Max'
-                        value={priceMax}
-                        onChange={handleChange('priceMax')}
-                    />
-                </div>
-                <div className={classes.box}>
                     <span>Price Min</span>
                     <input 
                         type='number' 
                         placeholder='Price Min'
                         value={priceMin}
                         onChange={handleChange('priceMin')}
+                    />
+                </div>
+                <div className={classes.box}>
+                    <span>Price Max</span>
+                    <input 
+                        type='number' 
+                        placeholder='Price Max'
+                        value={priceMax}
+                        onChange={handleChange('priceMax')}
                     />
                 </div>
                 <div className={classes.box}>
