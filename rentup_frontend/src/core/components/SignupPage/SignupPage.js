@@ -97,6 +97,16 @@ const SignupPage = () => {
     const submitHandler = (event) => {
         event.preventDefault();
         
+        if(username.length < 8){
+            alert('username must be at least 8 characters')
+            return;
+        }
+        
+        if(password.length < 8){
+            alert('password must be at least 8 characters')
+            return;
+        }
+        
         if(password !== password_repeat){
             alert('password repeat not like password')
             return;
